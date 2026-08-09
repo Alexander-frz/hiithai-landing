@@ -6,13 +6,33 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <meta name="description" content="Оплата локальных услуг, бронирование экскурсий в Таиланде, заказ трансфера из аэропорта и подбор жилья в одном Telegram-боте. Помощь туристам и экспатам.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+     m[i].l=1*new Date();
+     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+     ym(111417387, "init", {
+          ssr:true,
+          webvisor:true,
+          clickmap:true,
+          ecommerce:"dataLayer",
+          accurateTrackBounce:true,
+          trackLinks:true
+     });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/111417387" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+
   <!-- Open Graph для красивого превью в Telegram -->
   <meta property="og:title" content="Hi Thai — твой гид и помощник в Таиланде">
   <meta property="og:description" content="Консьерж-сервис, экскурсии, трансфер и жилье в один клик через Telegram.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200">
   <meta property="og:url" content="https://hiithai.com">
-  
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -74,7 +94,7 @@
         <h2 class="text-3xl font-bold md:text-4xl">Всё, что нужно для комфортного пребывания</h2>
         <p class="text-gray-600 mt-4">Мы объединили самые востребованные запросы путешественников в одном умном интерфейсе.</p>
       </div>
-      
+
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Услуга 1 -->
         <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
@@ -108,7 +128,7 @@
   <section id="how-it-works" class="py-20">
     <div class="container mx-auto px-6 max-w-5xl">
       <h2 class="text-3xl font-bold text-center mb-16">Как это работает?</h2>
-      
+
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="space-y-8">
           <div class="flex items-start space-x-4">
@@ -140,7 +160,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="bg-gray-900 rounded-3xl overflow-hidden shadow-2xl aspect-[9/16] max-w-xs mx-auto border-4 border-gray-800">
           <video class="w-full h-full object-cover" autoplay muted loop playsinline preload="auto">
             <source src="demo.mp4" type="video/mp4">
@@ -229,152 +249,147 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <!-- Footer -->
   <!-- Reviews Section -->
-<section class="py-16 bg-slate-900 text-white border-t border-slate-800">
-  <div class="container mx-auto px-6">
-    <div class="text-center max-w-2xl mx-auto mb-12">
-      <h2 class="text-3xl font-bold mb-4">Отзывы гостей и резидентов</h2>
-      <p class="text-slate-400 text-sm md:text-base">
-        Реальный опыт решения вопросов, бронирования и организации отдыха в Таиланде.
-      </p>
+  <section class="py-16 bg-slate-900 text-white border-t border-slate-800">
+    <div class="container mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold mb-4">Отзывы гостей и резидентов</h2>
+        <p class="text-slate-400 text-sm md:text-base">
+          Реальный опыт решения вопросов, бронирования и организации отдыха в Таиланде.
+        </p>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+
+        <!-- Card 1: Anna -->
+        <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-semibold rounded-full border border-emerald-500/20">
+                Отели и экскурсии
+              </span>
+              <span class="text-amber-400 text-xs">★★★★★</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              «Сашу мне порекомендовала подруга! Забронировала отель, помог купить билеты на автобус из Бангкока в Паттайю и организовал крутую экскурсию по трем островам. Очень надежный человек в Таиланде!»
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-emerald-600/30 text-emerald-300 font-bold flex items-center justify-center text-sm">
+                A
+              </div>
+              <div>
+                <div class="text-sm font-semibold text-white">Anna</div>
+                <div class="text-xs text-slate-400">Турист</div>
+              </div>
+            </div>
+            <a href="https://t.me/aasiahub/22/38" target="_blank" rel="noopener noreferrer" class="text-xs text-[#229ED9] hover:underline flex items-center gap-1 font-medium">
+              <span>Читать в TG</span> ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Natasha -->
+        <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-semibold rounded-full border border-blue-500/20">
+                Бронирование отеля
+              </span>
+              <span class="text-amber-400 text-xs">★★★★★</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              «Из России было проблемно забронировать жилье, подходящие варианты практически были разобраны! Саша сразу ответил и спас ситуацию — забронировал нужный отель. Мы очень благодарны!»
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-blue-600/30 text-blue-300 font-bold flex items-center justify-center text-sm">
+                N
+              </div>
+              <div>
+                <div class="text-sm font-semibold text-white">Natasha</div>
+                <div class="text-xs text-slate-400">Паттайя</div>
+              </div>
+            </div>
+            <a href="https://t.me/aasiahub/22/30" target="_blank" rel="noopener noreferrer" class="text-xs text-[#229ED9] hover:underline flex items-center gap-1 font-medium">
+              <span>Читать в TG</span> ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Костя Дёма -->
+        <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-semibold rounded-full border border-purple-500/20">
+                Аренда виллы
+              </span>
+              <span class="text-amber-400 text-xs">★★★★★</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              «Забронировали виллу в Паттае через Hi Thai. Всё очень оперативно и информативно. Премного благодарны, обязательно работаем дальше!»
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-purple-600/30 text-purple-300 font-bold flex items-center justify-center text-sm">
+                К
+              </div>
+              <div>
+                <div class="text-sm font-semibold text-white">Костя Дёма</div>
+                <div class="text-xs text-slate-400">Паттайя</div>
+              </div>
+            </div>
+            <a href="https://t.me/aasiahub/22/31" target="_blank" rel="noopener noreferrer" class="text-xs text-[#229ED9] hover:underline flex items-center gap-1 font-medium">
+              <span>Читать в TG</span> ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4: Полина Боринских -->
+        <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 bg-amber-500/10 text-amber-400 text-xs font-semibold rounded-full border border-amber-500/20">
+                Консьерж-сервис
+              </span>
+              <span class="text-amber-400 text-xs">★★★★★</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              «Уже дважды обращалась к Александру — очень культурно, чётко и с полным пониманием запроса. Рекомендую как надежного человека на месте!»
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-amber-600/30 text-amber-300 font-bold flex items-center justify-center text-sm">
+                П
+              </div>
+              <div>
+                <div class="text-sm font-semibold text-white">Полина Боринских</div>
+                <div class="text-xs text-slate-400">Турист</div>
+              </div>
+            </div>
+            <a href="https://t.me/aasiahub/22/58" target="_blank" rel="noopener noreferrer" class="text-xs text-[#229ED9] hover:underline flex items-center gap-1 font-medium">
+              <span>Читать в TG</span> ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA bottom -->
+      <div class="mt-12 text-center">
+        <a href="https://t.me/aasiahub/22" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-medium text-emerald-400 hover:text-emerald-300 underline transition">
+          <span>Смотреть все отзывы в Telegram-канале</span> →
+        </a>
+      </div>
     </div>
+  </section>
 
-    <!-- Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-      
-      <!-- Card 1: Anna -->
-      <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition">
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-semibold rounded-full border border-emerald-500/20">
-              Отели и экскурсии
-            </span>
-            <span class="text-amber-400 text-xs">★★★★★</span>
-          </div>
-          <p class="text-slate-300 text-sm leading-relaxed mb-6">
-            «Сашу мне порекомендовала подруга! Забронировала отель, помог купить билеты на автобус из Бангкока в Паттайю и организовал крутую экскурсию по трем островам. Очень надежный человек в Таиланде!»
-          </p>
-        </div>
-        <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-full bg-emerald-600/30 text-emerald-300 font-bold flex items-center justify-center text-sm">
-              A
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white">Anna</div>
-              <div class="text-xs text-slate-400">Турист</div>
-            </div>
-          </div>
-          <!-- 🔗 ССЫЛКА НА СООБЩЕНИЕ №1 (Anna) -->
-          <a href="https://t.me/aasiahub/22/38" target="_blank" rel="noopener noreferrer" class="text-xs text-[#229ED9] hover:underline flex items-center gap-1 font-medium">
-            <span>Читать в TG</span> ↗
-          </a>
-        </div>
-      </div>
-
-      <!-- Card 2: Natasha -->
-      <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition">
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-semibold rounded-full border border-blue-500/20">
-              Бронирование отеля
-            </span>
-            <span class="text-amber-400 text-xs">★★★★★</span>
-          </div>
-          <p class="text-slate-300 text-sm leading-relaxed mb-6">
-            «Из России было проблемно забронировать жилье, подходящие варианты практически были разобраны! Саша сразу ответил и спас ситуацию — забронировал нужный отель. Мы очень благодарны!»
-          </p>
-        </div>
-        <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-full bg-blue-600/30 text-blue-300 font-bold flex items-center justify-center text-sm">
-              N
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white">Natasha</div>
-              <div class="text-xs text-slate-400">Паттайя</div>
-            </div>
-          </div>
-          <!-- 🔗 ССЫЛКА НА СООБЩЕНИЕ №2 (Natasha) -->
-          <a href="https://t.me/aasiahub/22/30" target="_blank" rel="noopener noreferrer" class="text-xs text-[#229ED9] hover:underline flex items-center gap-1 font-medium">
-            <span>Читать в TG</span> ↗
-          </a>
-        </div>
-      </div>
-
-      <!-- Card 3: Костя Дёма -->
-      <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition">
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-semibold rounded-full border border-purple-500/20">
-              Аренда виллы
-            </span>
-            <span class="text-amber-400 text-xs">★★★★★</span>
-          </div>
-          <p class="text-slate-300 text-sm leading-relaxed mb-6">
-            «Забронировали виллу в Паттае через Hi Thai. Всё очень оперативно и информативно. Премного благодарны, обязательно работаем дальше!»
-          </p>
-        </div>
-        <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-full bg-purple-600/30 text-purple-300 font-bold flex items-center justify-center text-sm">
-              К
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white">Костя Дёма</div>
-              <div class="text-xs text-slate-400">Паттайя</div>
-            </div>
-          </div>
-          <!-- 🔗 ССЫЛКА НА СООБЩЕНИЕ №3 (Костя) -->
-          <a href="https://t.me/aasiahub/22/31" target="_blank" rel="noopener noreferrer" class="text-xs text-[#229ED9] hover:underline flex items-center gap-1 font-medium">
-            <span>Читать в TG</span> ↗
-          </a>
-        </div>
-      </div>
-
-      <!-- Card 4: Полина Боринских -->
-      <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition">
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="px-3 py-1 bg-amber-500/10 text-amber-400 text-xs font-semibold rounded-full border border-amber-500/20">
-              Консьерж-сервис
-            </span>
-            <span class="text-amber-400 text-xs">★★★★★</span>
-          </div>
-          <p class="text-slate-300 text-sm leading-relaxed mb-6">
-            «Уже дважды обращалась к Александру — очень культурно, чётко и с полным пониманием запроса. Рекомендую как надежного человека на месте!»
-          </p>
-        </div>
-        <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-full bg-amber-600/30 text-amber-300 font-bold flex items-center justify-center text-sm">
-              П
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-white">Полина Боринских</div>
-              <div class="text-xs text-slate-400">Турист</div>
-            </div>
-          </div>
-          <!-- 🔗 ССЫЛКА НА СООБЩЕНИЕ №4 (Полина) -->
-          <a href="https://t.me/aasiahub/22/58" target="_blank" rel="noopener noreferrer" class="text-xs text-[#229ED9] hover:underline flex items-center gap-1 font-medium">
-            <span>Читать в TG</span> ↗
-          </a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- CTA bottom -->
-    <div class="mt-12 text-center">
-      <!-- 🔗 ССЫЛКА НА КАНАЛ С ОТЗЫВАМИ -->
-      <a href="https://t.me/aasiahub/22" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-medium text-emerald-400 hover:text-emerald-300 underline transition">
-        <span>Смотреть все отзывы в Telegram-канале</span> →
-      </a>
-    </div>
-  </div>
-</section>
+  <!-- Footer -->
   <footer class="bg-gray-900 text-gray-400 py-12 text-sm border-t border-gray-800">
     <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="text-center md:text-left">
@@ -397,6 +412,72 @@
 </div>
     </div>
   </footer>
+
+  <!-- Attribution: parse UTM/yclid, get token from backend, update bot links -->
+  <script>
+  (function() {
+    const API_URL = 'https://bot.hiithai.com/api/attribution/create';
+    const BOT_LINKS_SELECTOR = 'a[href="https://t.me/hi_thai_bot"]';
+
+    function getUtmParams() {
+      const params = new URLSearchParams(window.location.search);
+      const data = {};
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'yclid'].forEach(key => {
+        const value = params.get(key);
+        if (value) data[key] = value;
+      });
+      return data;
+    }
+
+    function updateBotLinks(botLink) {
+      document.querySelectorAll(BOT_LINKS_SELECTOR).forEach(link => {
+        link.setAttribute('href', botLink);
+      });
+    }
+
+    function attachMetrikaGoal() {
+      document.querySelectorAll(BOT_LINKS_SELECTOR).forEach(link => {
+        link.addEventListener('click', function() {
+          if (typeof ym !== 'undefined') {
+            ym(111417387, 'reachGoal', 'open_bot_click');
+          }
+        });
+      });
+    }
+
+    async function initAttribution() {
+      const utmData = getUtmParams();
+
+      if (Object.keys(utmData).length === 0) {
+        attachMetrikaGoal();
+        return;
+      }
+
+      try {
+        const response = await fetch(API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(utmData),
+        });
+
+        if (!response.ok) {
+          throw new Error('Attribution API returned ' + response.status);
+        }
+
+        const data = await response.json();
+        if (data.bot_link) {
+          updateBotLinks(data.bot_link);
+        }
+      } catch (err) {
+        console.warn('Attribution failed, using fallback link:', err);
+      }
+
+      attachMetrikaGoal();
+    }
+
+    initAttribution();
+  })();
+  </script>
 
 </body>
 </html>

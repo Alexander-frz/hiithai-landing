@@ -53,9 +53,14 @@
         <a href="#how-it-works" class="hover:text-thaiTeal transition">Как запустить</a>
         <a href="#advantages" class="hover:text-thaiTeal transition">Преимущества</a>
       </nav>
-      <a href="https://t.me/hi_thai_bot" target="_blank" class="bg-thaiTeal hover:bg-opacity-90 text-white font-semibold px-5 py-2.5 rounded-full transition shadow-md">
-        Открыть в Telegram
-      </a>
+      <div class="flex items-center gap-3">
+        <a href="https://t.me/shchgo" target="_blank" class="hidden sm:inline-block border border-thaiTeal text-thaiTeal hover:bg-thaiTeal/10 font-semibold px-4 py-2.5 rounded-full transition contact-manager-link">
+          Написать менеджеру
+        </a>
+        <a href="https://t.me/hi_thai_bot" target="_blank" class="bg-thaiTeal hover:bg-opacity-90 text-white font-semibold px-5 py-2.5 rounded-full transition shadow-md">
+          Открыть в Telegram
+        </a>
+      </div>
     </div>
   </header>
 
@@ -76,7 +81,11 @@
         <a href="https://t.me/hi_thai_bot" target="_blank" class="w-full sm:w-auto bg-thaiOrange hover:scale-105 transform transition duration-200 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg text-center">
           🚀 Запустить Hi Thai бесплатно
         </a>
+        <a href="https://t.me/shchgo" target="_blank" class="w-full sm:w-auto border-2 border-white/40 hover:border-white text-white font-semibold text-lg px-8 py-4 rounded-xl transition text-center contact-manager-link">
+          💬 Есть вопросы? Написать менеджеру
+        </a>
       </div>
+      <p class="text-gray-300 text-sm mt-4">Отвечаем лично, без ботов и очередей</p>
     </div>
   </section>
 
@@ -236,9 +245,14 @@
     <div class="container mx-auto px-6">
       <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Ваш личный ассистент всегда под рукой</h2>
       <p class="text-gray-100 mb-8 max-w-md mx-auto text-sm md:text-base">Использование бота полностью бесплатно. Никаких подписок. Вы платите только за заказанные услуги.</p>
-      <a href="https://t.me/hi_thai_bot" target="_blank" class="inline-block bg-white text-thaiTeal font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-gray-100 transition">
-        Запустить Hi Thai в Telegram
-      </a>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a href="https://t.me/hi_thai_bot" target="_blank" class="inline-block bg-white text-thaiTeal font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-gray-100 transition">
+          Запустить Hi Thai в Telegram
+        </a>
+        <a href="https://t.me/shchgo" target="_blank" class="inline-block border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition contact-manager-link">
+          Написать менеджеру напрямую
+        </a>
+      </div>
     </div>
   </section>
 
@@ -265,7 +279,7 @@
               <span class="text-amber-400 text-xs">★★★★★</span>
             </div>
             <p class="text-slate-300 text-sm leading-relaxed mb-6">
-              «Hi Thai мне порекомендовала подруга! Забронировала отель, помогли купить билеты на автобус из Бангкока в Паттайю и организовали крутую экскурсию по трем островам. Очень надежный контакт в Таиланде!»
+              «Сашу мне порекомендовала подруга! Забронировала отель, помог купить билеты на автобус из Бангкока в Паттайю и организовал крутую экскурсию по трем островам. Очень надежный человек в Таиланде!»
             </p>
           </div>
           <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
@@ -352,7 +366,7 @@
               <span class="text-amber-400 text-xs">★★★★★</span>
             </div>
             <p class="text-slate-300 text-sm leading-relaxed mb-6">
-              «Уже дважды обращалась в Hi Thai — очень культурно, чётко и с полным пониманием запроса. Рекомендую как надежный контакт на месте!»
+              «Уже дважды обращалась к Александру — очень культурно, чётко и с полным пониманием запроса. Рекомендую как надежного человека на месте!»
             </p>
           </div>
           <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
@@ -388,7 +402,7 @@
       <div class="text-center md:text-left">
         <p>© 2026 Hi Thai. Все права защищены.</p>
         <p class="text-xs text-gray-500 mt-1">
-          Самозанятый: <span class="text-gray-400">Щеголев А.Ю</span> | ИНН: <span class="text-gray-400">753504593099</span>
+          Самозанятый: <span class="text-gray-400">Щеголев Александр Юрьевич</span> | ИНН: <span class="text-gray-400">7535045933099</span>
         </p>
         <p class="text-xs text-gray-500">Email: support@hiithai.com</p>
       </div>
@@ -433,6 +447,13 @@
         link.addEventListener('click', function() {
           if (typeof ym !== 'undefined') {
             ym(111417387, 'reachGoal', 'open_bot_click');
+          }
+        });
+      });
+      document.querySelectorAll('.contact-manager-link').forEach(link => {
+        link.addEventListener('click', function() {
+          if (typeof ym !== 'undefined') {
+            ym(111417387, 'reachGoal', 'contact_manager_click');
           }
         });
       });

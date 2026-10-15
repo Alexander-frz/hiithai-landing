@@ -6,6 +6,8 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <meta name="description" content="Оплата локальных услуг, бронирование экскурсий в Таиланде, заказ трансфера из аэропорта и подбор жилья в одном Telegram-боте. Помощь туристам и экспатам.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FAF7F2">
+  <script>document.documentElement.classList.add('js');</script>
 
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
@@ -28,421 +30,433 @@
   <link rel="canonical" href="https://hiithai.com/">
   <meta name="twitter:card" content="summary_large_image">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="tailwind.css">
 </head>
-<body class="font-sans text-gray-900 bg-white antialiased">
+<body class="font-sans bg-sand text-ink antialiased pb-20 md:pb-0">
+
+  <!-- Иконки (линейный стиль, используются через <use>) -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+    <symbol id="i-map" viewBox="0 0 24 24"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="15" x2="10" y2="15"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M5 16H3v-4l2-5h14l2 5v4h-2"/><circle cx="7" cy="16" r="2"/><circle cx="17" cy="16" r="2"/><path d="M9 16h6"/><path d="M3 12h18"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+  </svg>
 
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm">
-    <div class="container mx-auto flex items-center justify-between px-6 py-4">
-      <div class="flex items-center space-x-2">
-        <span class="text-2xl font-black tracking-wider text-thaiTeal">HI <span class="text-thaiOrange">THAI</span></span>
-      </div>
-      <nav class="hidden md:flex space-x-8 font-medium text-gray-600">
-        <a href="#features" class="hover:text-thaiTeal transition">Услуги</a>
-        <a href="#how-it-works" class="hover:text-thaiTeal transition">Как запустить</a>
-        <a href="#advantages" class="hover:text-thaiTeal transition">Преимущества</a>
+  <header class="sticky top-0 z-50 bg-sand/85 backdrop-blur-md border-b border-ink/5">
+    <div class="container flex items-center justify-between h-16">
+      <a href="#" class="flex items-center gap-2 text-xl font-extrabold tracking-tight" aria-label="Hi Thai — на главную">
+        <span class="w-2.5 h-2.5 rounded-full bg-thaiOrange" aria-hidden="true"></span>
+        <span>Hi <span class="text-thaiTeal">Thai</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-[15px] font-medium text-muted" aria-label="Основное меню">
+        <a href="#features" class="hover:text-ink transition">Услуги</a>
+        <a href="#how-it-works" class="hover:text-ink transition">Как это работает</a>
+        <a href="#advantages" class="hover:text-ink transition">Преимущества</a>
+        <a href="#reviews" class="hover:text-ink transition">Отзывы</a>
       </nav>
-      <div class="flex items-center gap-3">
-        <a href="https://t.me/shchgo" target="_blank" rel="noopener" class="hidden sm:inline-block border border-thaiTeal text-thaiTeal hover:bg-thaiTeal/10 font-semibold px-4 py-2.5 rounded-full transition contact-manager-link">
+      <div class="flex items-center gap-2">
+        <a href="https://t.me/shchgo" target="_blank" rel="noopener" class="btn-ghost hidden lg:inline-flex px-4 py-2 text-sm contact-manager-link">
           Написать менеджеру
         </a>
-        <a href="https://t.me/hi_thai_bot" target="_blank" rel="noopener" class="bg-thaiTeal hover:bg-opacity-90 text-white font-semibold px-4 sm:px-5 py-2.5 rounded-full transition shadow-md text-sm sm:text-base">
-          Открыть в Telegram
+        <a href="https://t.me/hi_thai_bot" target="_blank" rel="noopener" class="btn-primary px-4 py-2 text-sm">
+          <svg class="ico w-4 h-4" aria-hidden="true"><use href="#i-send"/></svg>
+          Открыть бота
         </a>
-        <button id="menu-toggle" type="button" class="md:hidden p-2 -mr-2 text-gray-700" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <button id="menu-toggle" type="button" class="md:hidden p-2 -mr-2 text-ink" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-menu"/></svg>
         </button>
       </div>
     </div>
-    <nav id="mobile-menu" class="hidden md:hidden border-t border-gray-100 px-6 py-3 font-medium text-gray-700 flex-col">
-      <a href="#features" class="py-3">Услуги</a>
-      <a href="#how-it-works" class="py-3">Как запустить</a>
-      <a href="#advantages" class="py-3">Преимущества</a>
+    <nav id="mobile-menu" class="hidden md:hidden container pb-4 flex-col text-base font-medium" aria-label="Мобильное меню">
+      <a href="#features" class="py-3 border-b border-ink/5">Услуги</a>
+      <a href="#how-it-works" class="py-3 border-b border-ink/5">Как это работает</a>
+      <a href="#advantages" class="py-3 border-b border-ink/5">Преимущества</a>
+      <a href="#reviews" class="py-3 border-b border-ink/5">Отзывы</a>
       <a href="https://t.me/shchgo" target="_blank" rel="noopener" class="py-3 text-thaiTeal contact-manager-link">Написать менеджеру</a>
     </nav>
   </header>
 
   <main>
 
-  <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-gray-900 to-indigo-950 text-white overflow-hidden py-24 md:py-32">
-    <div class="absolute inset-0 opacity-40">
-      <img
-        src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1000&q=60&auto=format&fit=crop"
-        srcset="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=640&q=60&auto=format&fit=crop 640w,
-                https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1000&q=60&auto=format&fit=crop 1000w,
-                https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1600&q=60&auto=format&fit=crop 1600w"
-        sizes="100vw" width="1600" height="1066" fetchpriority="high"
-        alt="Thailand" class="w-full h-full object-cover">
-    </div>
-    <div class="container mx-auto relative z-10 px-6 text-center max-w-4xl">
-      <span class="bg-thaiOrange text-gray-900 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Персональный консьерж-сервис в Таиланде</span>
-      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mt-4 mb-6 leading-tight">
-        Решайте любые задачи в Таиланде через Telegram
-      </h1>
-      <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-        Помощь с местными платежами, заказ проверенных экскурсий, комфортный трансфер из аэропорта и подбор жилья без посредников.
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-        <a href="https://t.me/hi_thai_bot" target="_blank" class="w-full sm:w-auto bg-thaiOrange hover:scale-105 transform transition duration-200 text-gray-900 font-bold text-lg px-8 py-4 rounded-xl shadow-lg text-center">
-          🚀 Запустить Hi Thai бесплатно
-        </a>
-        <a href="https://t.me/shchgo" target="_blank" class="w-full sm:w-auto border-2 border-white/40 hover:border-white text-white font-semibold text-lg px-8 py-4 rounded-xl transition text-center contact-manager-link">
-          💬 Есть вопросы? Написать менеджеру
-        </a>
-      </div>
-      <p class="text-gray-300 text-sm mt-4">Отвечаем лично, без ботов и очередей</p>
-    </div>
-  </section>
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+      <div aria-hidden="true" class="pointer-events-none absolute -top-48 -right-40 w-[38rem] h-[38rem] rounded-full bg-thaiTeal/15 blur-3xl"></div>
+      <div aria-hidden="true" class="pointer-events-none absolute top-64 -left-48 w-[30rem] h-[30rem] rounded-full bg-thaiOrange/15 blur-3xl"></div>
 
-  <!-- Features -->
-  <section id="features" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl font-bold md:text-4xl">Всё, что нужно для комфортного пребывания</h2>
-        <p class="text-gray-600 mt-4">Мы объединили самые востребованные запросы путешественников в одном умном интерфейсе.</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Услуга 1 -->
-        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-          <div class="text-3xl mb-4">🗺️</div>
-          <h3 class="text-xl font-bold mb-2">Экскурсии</h3>
-          <p class="text-gray-600 text-sm">Актуальные туры по всему Таиланду и островам, отзывы, удобный выбор дат и мгновенное бронирование.</p>
-        </div>
-        <!-- Услуга 2 -->
-        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-          <div class="text-3xl mb-4">💳</div>
-          <h3 class="text-xl font-bold mb-2">Локальные платежи</h3>
-          <p class="text-gray-600 text-sm">Помощь в оплате местных счетов, сервисов и решении вопросов с наличными (THB) без работающих карт.</p>
-        </div>
-        <!-- Услуга 3 -->
-        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-          <div class="text-3xl mb-4">🏡</div>
-          <h3 class="text-xl font-bold mb-2">Жилье и Кондо</h3>
-          <p class="text-gray-600 text-sm">Прямые заявки на подбор апартаментов, вилл и студий в популярных локациях под ваш бюджет.</p>
-        </div>
-        <!-- Услуга 4 -->
-        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
-          <div class="text-3xl mb-4">🚗</div>
-          <h3 class="text-xl font-bold mb-2">Трансфер</h3>
-          <p class="text-gray-600 text-sm">Быстрый заказ комфортного такси из аэропортов (Суварнабхуми, Донмыанг, Пхукет и др.) до дверей отеля.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How it works -->
-  <section id="how-it-works" class="py-20">
-    <div class="container mx-auto px-6 max-w-5xl">
-      <h2 class="text-3xl font-bold text-center mb-16">Как это работает?</h2>
-
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="space-y-8">
-          <div class="flex items-start space-x-4">
-            <div class="bg-thaiTeal/10 text-thaiTeal font-bold rounded-xl p-3">01</div>
-            <div>
-              <h3 class="text-lg font-bold">Активация сервиса</h3>
-              <p class="text-gray-600 text-sm">Перейдите в бот и нажмите кнопку <code>/start</code> для авторизации.</p>
-            </div>
-          </div>
-          <div class="flex items-start space-x-4">
-            <div class="bg-thaiTeal/10 text-thaiTeal font-bold rounded-xl p-3">02</div>
-            <div>
-              <h3 class="text-lg font-bold">Выбор направления</h3>
-              <p class="text-gray-600 text-sm">Используйте интерактивное меню для выбора нужного раздела услуг.</p>
-            </div>
-          </div>
-          <div class="flex items-start space-x-4">
-            <div class="bg-thaiTeal/10 text-thaiTeal font-bold rounded-xl p-3">03</div>
-            <div>
-              <h3 class="text-lg font-bold">Подтверждение деталей</h3>
-              <p class="text-gray-600 text-sm">Бот автоматически рассчитает условия, проверит свободные места или сформирует запрос.</p>
-            </div>
-          </div>
-          <div class="flex items-start space-x-4">
-            <div class="bg-thaiTeal/10 text-thaiTeal font-bold rounded-xl p-3">04</div>
-            <div>
-              <h3 class="text-lg font-bold">Связь с оператором</h3>
-              <p class="text-gray-600 text-sm">Заявка мгновенно поступает менеджеру для исполнения. Вы получаете уведомления на каждом этапе.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-gray-900 rounded-3xl overflow-hidden shadow-2xl aspect-[9/16] max-w-xs mx-auto border-4 border-gray-800">
-          <video class="w-full h-full object-cover" autoplay muted loop playsinline preload="metadata">
-            <source src="demo.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-          </video>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Advantages -->
-  <section id="advantages" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-thaiTeal font-bold uppercase text-xs tracking-widest">Почему именно Hi Thai</span>
-        <h2 class="text-3xl font-bold md:text-4xl mt-2">Комфорт и безопасность на каждом шагу</h2>
-        <p class="text-gray-600 mt-4">Мы берем на себя все бытовые и организационные сложности вашего отдыха или проживания в Таиланде.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Преимущество 1 -->
-        <div class="p-6 rounded-2xl bg-white shadow-sm hover:shadow-md transition border border-gray-100">
-          <div class="w-12 h-12 bg-thaiTeal/10 text-thaiTeal rounded-xl flex items-center justify-center text-2xl mb-4">
-            ⚡
-          </div>
-          <h3 class="text-lg font-bold mb-2">Всё в одном Telegram</h3>
-          <p class="text-gray-600 text-sm">Никаких лишних приложений, регистраций и сайтов. Все нужные услуги доступны в пару кликов прямо в вашем мессенджере.</p>
-        </div>
-
-        <!-- Преимущество 2 -->
-        <div class="p-6 rounded-2xl bg-white shadow-sm hover:shadow-md transition border border-gray-100">
-          <div class="w-12 h-12 bg-thaiOrange/10 text-thaiOrange rounded-xl flex items-center justify-center text-2xl mb-4">
-            🤝
-          </div>
-          <h3 class="text-lg font-bold mb-2">Поддержка на русском 24/7</h3>
-          <p class="text-gray-600 text-sm">Забудьте о языковом барьере и сложностях перевода. Наша команда всегда на связи и готова оперативно помочь в любой ситуации.</p>
-        </div>
-
-        <!-- Преимущество 3 -->
-        <div class="p-6 rounded-2xl bg-white shadow-sm hover:shadow-md transition border border-gray-100">
-          <div class="w-12 h-12 bg-thaiTeal/10 text-thaiTeal rounded-xl flex items-center justify-center text-2xl mb-4">
-            💸
-          </div>
-          <h3 class="text-lg font-bold mb-2">Прозрачные расчеты</h3>
-          <p class="text-gray-600 text-sm">Удобные способы оплаты без скрытых комиссий банкоматов. Помогаем легко решить любые вопросы с местными платежами.</p>
-        </div>
-
-        <!-- Преимущество 4 -->
-        <div class="p-6 rounded-2xl bg-white shadow-sm hover:shadow-md transition border border-gray-100">
-          <div class="w-12 h-12 bg-thaiOrange/10 text-thaiOrange rounded-xl flex items-center justify-center text-2xl mb-4">
-            🛡️
-          </div>
-          <h3 class="text-lg font-bold mb-2">Проверенные партнеры</h3>
-          <p class="text-gray-600 text-sm">Мы работаем только с надежными гидами, водителями и собственниками жилья по всему Таиланду без завышенных цен.</p>
-        </div>
-
-        <!-- Преимущество 5 -->
-        <div class="p-6 rounded-2xl bg-white shadow-sm hover:shadow-md transition border border-gray-100">
-          <div class="w-12 h-12 bg-thaiTeal/10 text-thaiTeal rounded-xl flex items-center justify-center text-2xl mb-4">
-            ⏱️
-          </div>
-          <h3 class="text-lg font-bold mb-2">Экономия времени</h3>
-          <p class="text-gray-600 text-sm">Не нужно тратить часы на поиск информации по сотням чатов. Вы получаете готовое и проверенное решение за считанные минуты.</p>
-        </div>
-
-        <!-- Преимущество 6 -->
-        <div class="p-6 rounded-2xl bg-white shadow-sm hover:shadow-md transition border border-gray-100">
-          <div class="w-12 h-12 bg-thaiOrange/10 text-thaiOrange rounded-xl flex items-center justify-center text-2xl mb-4">
-            📍
-          </div>
-          <h3 class="text-lg font-bold mb-2">Локальная экспертиза</h3>
-          <p class="text-gray-600 text-sm">Живем и работаем в Таиланде, поэтому знаем все тонкости, лучшие локации, маршруты и нетуристические места.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="py-20 bg-thaiTeal text-white text-center">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Ваш личный ассистент всегда под рукой</h2>
-      <p class="text-gray-100 mb-8 max-w-md mx-auto text-sm md:text-base">Использование бота полностью бесплатно. Никаких подписок. Вы платите только за заказанные услуги.</p>
-      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-        <a href="https://t.me/hi_thai_bot" target="_blank" class="inline-block bg-white text-thaiTeal font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-gray-100 transition">
-          Запустить Hi Thai в Telegram
-        </a>
-        <a href="https://t.me/shchgo" target="_blank" class="inline-block border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition contact-manager-link">
-          Написать менеджеру напрямую
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Reviews Section -->
-  <section class="py-16 bg-slate-900 text-white border-t border-slate-800">
-    <div class="container mx-auto px-6">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="text-3xl font-bold mb-4">Отзывы гостей и резидентов</h2>
-        <p class="text-slate-400 text-sm md:text-base">
-          Реальный опыт решения вопросов, бронирования и организации отдыха в Таиланде.
-        </p>
-      </div>
-
-      <!-- Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-
-        <!-- Card 1: Anna -->
-        <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-semibold rounded-full border border-emerald-500/20">
-                Отели и экскурсии
-              </span>
-              <span class="text-amber-400 text-xs">★★★★★</span>
-            </div>
-            <p class="text-slate-300 text-sm leading-relaxed mb-6">
-              «Сашу мне порекомендовала подруга! Забронировала отель, помог купить билеты на автобус из Бангкока в Паттайю и организовал крутую экскурсию по трем островам. Очень надежный человек в Таиланде!»
-            </p>
-          </div>
-          <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full bg-emerald-600/30 text-emerald-300 font-bold flex items-center justify-center text-sm">
-                A
-              </div>
-              <div>
-                <div class="text-sm font-semibold text-white">Anna</div>
-                <div class="text-xs text-slate-400">Турист</div>
-              </div>
-            </div>
-            <a href="https://t.me/aasiahub/22/38" target="_blank" rel="noopener noreferrer" class="text-xs text-[#229ED9] hover:underline flex items-center gap-1 font-medium">
-              <span>Читать в TG</span> ↗
+      <div class="container relative grid lg:grid-cols-[1.15fr_0.85fr] gap-14 lg:gap-10 items-center pt-12 pb-16 md:pt-20 md:pb-24">
+        <div>
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/80 border border-ink/10 px-3.5 py-1.5 text-sm font-medium text-muted shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-thaiTeal" aria-hidden="true"></span>
+            Персональный консьерж-сервис в Таиланде
+          </span>
+          <h1 class="mt-6 text-[2.6rem] leading-[1.04] sm:text-6xl lg:text-7xl font-extrabold tracking-tight">
+            Решайте любые задачи в&nbsp;Таиланде <span class="text-thaiTeal">через&nbsp;Telegram</span>
+          </h1>
+          <p class="mt-6 text-lg sm:text-xl leading-relaxed text-muted max-w-xl">
+            Помощь с местными платежами, заказ проверенных экскурсий, комфортный трансфер из аэропорта и подбор жилья без посредников.
+          </p>
+          <div class="mt-9 flex flex-col sm:flex-row gap-3">
+            <a id="hero-cta" href="https://t.me/hi_thai_bot" target="_blank" rel="noopener" class="btn-primary px-7 py-4 text-lg shadow-lg shadow-thaiTeal/25">
+              Запустить Hi Thai бесплатно
+              <svg class="ico w-5 h-5" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a href="https://t.me/shchgo" target="_blank" rel="noopener" class="btn-ghost px-7 py-4 text-lg contact-manager-link">
+              Написать менеджеру
             </a>
           </div>
-        </div>
-
-        <!-- Card 2: Natasha -->
-        <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-semibold rounded-full border border-blue-500/20">
-                Бронирование отеля
+          <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted">
+            <a href="https://t.me/aasiahub/22" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 hover:text-ink transition">
+              <span class="flex text-thaiOrange" aria-label="Оценка 5 из 5">
+                <svg class="ico-fill w-4 h-4" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico-fill w-4 h-4" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico-fill w-4 h-4" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico-fill w-4 h-4" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico-fill w-4 h-4" aria-hidden="true"><use href="#i-star"/></svg>
               </span>
-              <span class="text-amber-400 text-xs">★★★★★</span>
-            </div>
-            <p class="text-slate-300 text-sm leading-relaxed mb-6">
-              «Из России было проблемно забронировать жилье, подходящие варианты практически были разобраны! Саша сразу ответил и спас ситуацию — забронировал нужный отель. Мы очень благодарны!»
-            </p>
-          </div>
-          <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full bg-blue-600/30 text-blue-300 font-bold flex items-center justify-center text-sm">
-                N
-              </div>
-              <div>
-                <div class="text-sm font-semibold text-white">Natasha</div>
-                <div class="text-xs text-slate-400">Паттайя</div>
-              </div>
-            </div>
-            <a href="https://t.me/aasiahub/22/30" target="_blank" rel="noopener noreferrer" class="text-xs text-[#229ED9] hover:underline flex items-center gap-1 font-medium">
-              <span>Читать в TG</span> ↗
+              <span class="underline decoration-ink/20 underline-offset-4">Отзывы клиентов в Telegram</span>
             </a>
+            <span class="inline-flex items-center gap-2">
+              <svg class="ico w-4 h-4 text-thaiTeal" aria-hidden="true"><use href="#i-check"/></svg>
+              Отвечаем лично, без ботов и очередей
+            </span>
           </div>
         </div>
 
-        <!-- Card 3: Костя Дёма -->
-        <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-semibold rounded-full border border-purple-500/20">
-                Аренда виллы
-              </span>
-              <span class="text-amber-400 text-xs">★★★★★</span>
+        <!-- Телефон с демо бота -->
+        <div class="relative mx-auto w-full max-w-[290px] lg:max-w-[310px]">
+          <div class="relative rounded-[2.6rem] bg-ink p-2.5 shadow-2xl shadow-ink/30 ring-1 ring-ink/10">
+            <div class="rounded-[2.1rem] overflow-hidden bg-[#0e1621] aspect-[9/16]">
+              <video class="w-full h-full object-cover" muted loop playsinline autoplay preload="none" data-lazy-video aria-label="Демонстрация работы бота Hi Thai">
+                <source data-src="demo.mp4" type="video/mp4">
+              </video>
             </div>
-            <p class="text-slate-300 text-sm leading-relaxed mb-6">
-              «Забронировали виллу в Паттае через Hi Thai. Всё очень оперативно и информативно. Премного благодарны, обязательно работаем дальше!»
-            </p>
           </div>
-          <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full bg-purple-600/30 text-purple-300 font-bold flex items-center justify-center text-sm">
-                К
-              </div>
-              <div>
-                <div class="text-sm font-semibold text-white">Костя Дёма</div>
-                <div class="text-xs text-slate-400">Паттайя</div>
-              </div>
-            </div>
-            <a href="https://t.me/aasiahub/22/31" target="_blank" rel="noopener noreferrer" class="text-xs text-[#229ED9] hover:underline flex items-center gap-1 font-medium">
-              <span>Читать в TG</span> ↗
-            </a>
+          <div class="hidden sm:flex absolute -left-16 bottom-20 items-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-xl shadow-ink/10 ring-1 ring-ink/5">
+            <span class="grid place-items-center w-9 h-9 rounded-xl bg-thaiTeal/10 text-thaiTeal">
+              <svg class="ico w-5 h-5" aria-hidden="true"><use href="#i-check"/></svg>
+            </span>
+            <span class="text-sm leading-tight"><b class="block font-semibold">Бот бесплатный</b><span class="text-muted">платите только за услуги</span></span>
           </div>
         </div>
-
-        <!-- Card 4: Полина Боринских -->
-        <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="px-3 py-1 bg-amber-500/10 text-amber-400 text-xs font-semibold rounded-full border border-amber-500/20">
-                Консьерж-сервис
-              </span>
-              <span class="text-amber-400 text-xs">★★★★★</span>
-            </div>
-            <p class="text-slate-300 text-sm leading-relaxed mb-6">
-              «Уже дважды обращалась к Александру — очень культурно, чётко и с полным пониманием запроса. Рекомендую как надежного человека на месте!»
-            </p>
-          </div>
-          <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full bg-amber-600/30 text-amber-300 font-bold flex items-center justify-center text-sm">
-                П
-              </div>
-              <div>
-                <div class="text-sm font-semibold text-white">Полина Боринских</div>
-                <div class="text-xs text-slate-400">Турист</div>
-              </div>
-            </div>
-            <a href="https://t.me/aasiahub/22/58" target="_blank" rel="noopener noreferrer" class="text-xs text-[#229ED9] hover:underline flex items-center gap-1 font-medium">
-              <span>Читать в TG</span> ↗
-            </a>
-          </div>
-        </div>
-
       </div>
+    </section>
 
-      <!-- CTA bottom -->
-      <div class="mt-12 text-center">
-        <a href="https://t.me/aasiahub/22" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-medium text-emerald-400 hover:text-emerald-300 underline transition">
-          <span>Смотреть все отзывы в Telegram-канале</span> →
-        </a>
+    <!-- Услуги -->
+    <section id="features" class="py-20 md:py-28 scroll-mt-16">
+      <div class="container">
+        <div class="max-w-2xl reveal">
+          <p class="eyebrow">Услуги</p>
+          <h2 class="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">Всё, что нужно для комфортного пребывания</h2>
+          <p class="mt-4 text-lg text-muted">Мы объединили самые востребованные запросы путешественников в одном умном интерфейсе.</p>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <article class="reveal md:col-span-2 relative overflow-hidden rounded-3xl bg-thaiTeal text-white p-8 md:p-10 min-h-[260px] flex flex-col justify-end">
+            <svg class="ico absolute -right-6 -top-6 w-48 h-48 text-white/10" stroke-width="1.2" aria-hidden="true"><use href="#i-map"/></svg>
+            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-white/15">
+              <svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-map"/></svg>
+            </span>
+            <h3 class="mt-6 text-2xl md:text-3xl font-bold">Экскурсии</h3>
+            <p class="mt-2 max-w-md text-white">Актуальные туры по всему Таиланду и островам, отзывы, удобный выбор дат и мгновенное бронирование.</p>
+          </article>
+
+          <article class="reveal rounded-3xl bg-white p-8 ring-1 ring-ink/5">
+            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiOrange/15 text-ink">
+              <svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-card"/></svg>
+            </span>
+            <h3 class="mt-6 text-xl font-bold">Локальные платежи</h3>
+            <p class="mt-2 text-muted">Помощь в оплате местных счетов, сервисов и решении вопросов с наличными (THB) без работающих карт.</p>
+          </article>
+
+          <article class="reveal rounded-3xl bg-white p-8 ring-1 ring-ink/5">
+            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiTeal/10 text-thaiTeal">
+              <svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-home"/></svg>
+            </span>
+            <h3 class="mt-6 text-xl font-bold">Жильё и кондо</h3>
+            <p class="mt-2 text-muted">Прямые заявки на подбор апартаментов, вилл и студий в популярных локациях под ваш бюджет.</p>
+          </article>
+
+          <article class="reveal rounded-3xl bg-white p-8 ring-1 ring-ink/5">
+            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiOrange/15 text-ink">
+              <svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-car"/></svg>
+            </span>
+            <h3 class="mt-6 text-xl font-bold">Трансфер</h3>
+            <p class="mt-2 text-muted">Быстрый заказ комфортного такси из аэропортов (Суварнабхуми, Донмыанг, Пхукет и др.) до дверей отеля.</p>
+          </article>
+
+          <article class="reveal rounded-3xl bg-ink text-white p-8 flex flex-col">
+            <h3 class="text-xl font-bold">Не нашли нужную услугу?</h3>
+            <p class="mt-2 text-white/80">Напишите менеджеру — поможем с любой задачей в Таиланде.</p>
+            <a href="https://t.me/shchgo" target="_blank" rel="noopener" class="mt-auto pt-6 inline-flex items-center gap-2 font-semibold text-thaiOrange hover:gap-3 transition-all contact-manager-link">
+              Написать менеджеру
+              <svg class="ico w-5 h-5" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Как это работает -->
+    <section id="how-it-works" class="py-20 md:py-28 bg-white scroll-mt-16">
+      <div class="container">
+        <div class="max-w-2xl reveal">
+          <p class="eyebrow">Как это работает</p>
+          <h2 class="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">Четыре шага от вопроса до решения</h2>
+        </div>
+
+        <ol class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <li class="reveal rounded-3xl bg-sand p-7">
+            <span class="inline-grid place-items-center w-11 h-11 rounded-full bg-thaiTeal text-white font-bold">1</span>
+            <h3 class="mt-5 text-lg font-bold">Активация сервиса</h3>
+            <p class="mt-2 text-muted">Перейдите в бот и нажмите кнопку <code class="rounded bg-ink/5 px-1.5 py-0.5 text-[0.9em] text-ink">/start</code> для авторизации.</p>
+          </li>
+          <li class="reveal rounded-3xl bg-sand p-7">
+            <span class="inline-grid place-items-center w-11 h-11 rounded-full bg-thaiTeal text-white font-bold">2</span>
+            <h3 class="mt-5 text-lg font-bold">Выбор направления</h3>
+            <p class="mt-2 text-muted">Используйте интерактивное меню для выбора нужного раздела услуг.</p>
+          </li>
+          <li class="reveal rounded-3xl bg-sand p-7">
+            <span class="inline-grid place-items-center w-11 h-11 rounded-full bg-thaiTeal text-white font-bold">3</span>
+            <h3 class="mt-5 text-lg font-bold">Подтверждение деталей</h3>
+            <p class="mt-2 text-muted">Бот автоматически рассчитает условия, проверит свободные места или сформирует запрос.</p>
+          </li>
+          <li class="reveal rounded-3xl bg-sand p-7">
+            <span class="inline-grid place-items-center w-11 h-11 rounded-full bg-thaiOrange text-ink font-bold">4</span>
+            <h3 class="mt-5 text-lg font-bold">Связь с оператором</h3>
+            <p class="mt-2 text-muted">Заявка мгновенно поступает менеджеру для исполнения. Вы получаете уведомления на каждом этапе.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section id="advantages" class="py-20 md:py-28 scroll-mt-16">
+      <div class="container">
+        <div class="max-w-2xl reveal">
+          <p class="eyebrow">Почему именно Hi Thai</p>
+          <h2 class="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">Комфорт и безопасность на каждом шагу</h2>
+          <p class="mt-4 text-lg text-muted">Мы берём на себя все бытовые и организационные сложности вашего отдыха или проживания в Таиланде.</p>
+        </div>
+
+        <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
+          <div class="reveal">
+            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiTeal/10 text-thaiTeal"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-zap"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold">Всё в одном Telegram</h3>
+            <p class="mt-2 text-muted">Никаких лишних приложений, регистраций и сайтов. Все нужные услуги доступны в пару кликов прямо в вашем мессенджере.</p>
+          </div>
+          <div class="reveal">
+            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiOrange/15 text-ink"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-chat"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold">Поддержка на русском 24/7</h3>
+            <p class="mt-2 text-muted">Забудьте о языковом барьере и сложностях перевода. Наша команда всегда на связи и готова оперативно помочь в любой ситуации.</p>
+          </div>
+          <div class="reveal">
+            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiTeal/10 text-thaiTeal"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-card"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold">Прозрачные расчёты</h3>
+            <p class="mt-2 text-muted">Удобные способы оплаты без скрытых комиссий банкоматов. Помогаем легко решить любые вопросы с местными платежами.</p>
+          </div>
+          <div class="reveal">
+            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiOrange/15 text-ink"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold">Проверенные партнёры</h3>
+            <p class="mt-2 text-muted">Мы работаем только с надёжными гидами, водителями и собственниками жилья по всему Таиланду без завышенных цен.</p>
+          </div>
+          <div class="reveal">
+            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiTeal/10 text-thaiTeal"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-clock"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold">Экономия времени</h3>
+            <p class="mt-2 text-muted">Не нужно тратить часы на поиск информации по сотням чатов. Вы получаете готовое и проверенное решение за считанные минуты.</p>
+          </div>
+          <div class="reveal">
+            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiOrange/15 text-ink"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-pin"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold">Локальная экспертиза</h3>
+            <p class="mt-2 text-muted">Живём и работаем в Таиланде, поэтому знаем все тонкости, лучшие локации, маршруты и нетуристические места.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы в стиле переписки Telegram -->
+    <section id="reviews" class="py-20 md:py-28 bg-chat scroll-mt-16">
+      <div class="container">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 reveal">
+          <div class="max-w-2xl">
+            <p class="eyebrow">Отзывы</p>
+            <h2 class="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">Отзывы гостей и резидентов</h2>
+            <p class="mt-4 text-lg text-muted">Реальный опыт решения вопросов, бронирования и организации отдыха в Таиланде.</p>
+          </div>
+          <a href="https://t.me/aasiahub/22" target="_blank" rel="noopener noreferrer" class="btn-ghost shrink-0 px-5 py-3">
+            Все отзывы в Telegram-канале
+            <svg class="ico w-4 h-4" aria-hidden="true"><use href="#i-out"/></svg>
+          </a>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-2 gap-x-8 gap-y-6">
+          <figure class="reveal flex items-end gap-3">
+            <span class="shrink-0 grid place-items-center w-10 h-10 rounded-full bg-thaiTeal text-white font-semibold" aria-hidden="true">A</span>
+            <div class="bubble relative flex-1 rounded-2xl rounded-bl-none bg-white p-5 shadow-sm">
+              <figcaption class="flex items-center justify-between gap-3">
+                <span class="font-semibold text-thaiTeal">Anna</span>
+                <span class="text-xs text-muted">Отели и экскурсии</span>
+              </figcaption>
+              <blockquote class="mt-2 leading-relaxed">«Сашу мне порекомендовала подруга! Забронировала отель, помог купить билеты на автобус из Бангкока в Паттайю и организовал крутую экскурсию по трем островам. Очень надежный человек в Таиланде!»</blockquote>
+              <a href="https://t.me/aasiahub/22/38" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-thaiTeal hover:underline">Читать в Telegram<svg class="ico w-3.5 h-3.5" aria-hidden="true"><use href="#i-out"/></svg></a>
+            </div>
+          </figure>
+
+          <figure class="reveal flex items-end gap-3">
+            <span class="shrink-0 grid place-items-center w-10 h-10 rounded-full bg-thaiOrange text-ink font-semibold" aria-hidden="true">N</span>
+            <div class="bubble relative flex-1 rounded-2xl rounded-bl-none bg-white p-5 shadow-sm">
+              <figcaption class="flex items-center justify-between gap-3">
+                <span class="font-semibold text-thaiTeal">Natasha</span>
+                <span class="text-xs text-muted">Бронирование отеля · Паттайя</span>
+              </figcaption>
+              <blockquote class="mt-2 leading-relaxed">«Из России было проблемно забронировать жилье, подходящие варианты практически были разобраны! Саша сразу ответил и спас ситуацию — забронировал нужный отель. Мы очень благодарны!»</blockquote>
+              <a href="https://t.me/aasiahub/22/30" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-thaiTeal hover:underline">Читать в Telegram<svg class="ico w-3.5 h-3.5" aria-hidden="true"><use href="#i-out"/></svg></a>
+            </div>
+          </figure>
+
+          <figure class="reveal flex items-end gap-3">
+            <span class="shrink-0 grid place-items-center w-10 h-10 rounded-full bg-ink text-white font-semibold" aria-hidden="true">К</span>
+            <div class="bubble relative flex-1 rounded-2xl rounded-bl-none bg-white p-5 shadow-sm">
+              <figcaption class="flex items-center justify-between gap-3">
+                <span class="font-semibold text-thaiTeal">Костя Дёма</span>
+                <span class="text-xs text-muted">Аренда виллы · Паттайя</span>
+              </figcaption>
+              <blockquote class="mt-2 leading-relaxed">«Забронировали виллу в Паттае через Hi Thai. Всё очень оперативно и информативно. Премного благодарны, обязательно работаем дальше!»</blockquote>
+              <a href="https://t.me/aasiahub/22/31" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-thaiTeal hover:underline">Читать в Telegram<svg class="ico w-3.5 h-3.5" aria-hidden="true"><use href="#i-out"/></svg></a>
+            </div>
+          </figure>
+
+          <figure class="reveal flex items-end gap-3">
+            <span class="shrink-0 grid place-items-center w-10 h-10 rounded-full bg-thaiTealDark text-white font-semibold" aria-hidden="true">П</span>
+            <div class="bubble relative flex-1 rounded-2xl rounded-bl-none bg-white p-5 shadow-sm">
+              <figcaption class="flex items-center justify-between gap-3">
+                <span class="font-semibold text-thaiTeal">Полина Боринских</span>
+                <span class="text-xs text-muted">Консьерж-сервис</span>
+              </figcaption>
+              <blockquote class="mt-2 leading-relaxed">«Уже дважды обращалась к Александру — очень культурно, чётко и с полным пониманием запроса. Рекомендую как надежного человека на месте!»</blockquote>
+              <a href="https://t.me/aasiahub/22/58" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-thaiTeal hover:underline">Читать в Telegram<svg class="ico w-3.5 h-3.5" aria-hidden="true"><use href="#i-out"/></svg></a>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Финальный CTA -->
+    <section class="py-20 md:py-28">
+      <div class="container">
+        <div class="reveal relative overflow-hidden rounded-[2rem] bg-ink text-white px-6 py-14 md:px-16 md:py-20 text-center">
+          <div aria-hidden="true" class="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 w-[40rem] h-[20rem] rounded-full bg-thaiTeal/40 blur-3xl"></div>
+          <div class="relative">
+            <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">Ваш личный ассистент всегда под рукой</h2>
+            <p class="mt-5 text-lg text-white/80 max-w-xl mx-auto">Использование бота полностью бесплатно. Никаких подписок. Вы платите только за заказанные услуги.</p>
+            <div class="mt-9 flex flex-col sm:flex-row justify-center gap-3">
+              <a href="https://t.me/hi_thai_bot" target="_blank" rel="noopener" class="btn-accent px-7 py-4 text-lg">
+                Запустить Hi Thai в Telegram
+                <svg class="ico w-5 h-5" aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+              <a href="https://t.me/shchgo" target="_blank" rel="noopener" class="btn-ghost-dark px-7 py-4 text-lg contact-manager-link">
+                Написать менеджеру напрямую
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 py-12 text-sm border-t border-gray-800">
-    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="text-center md:text-left">
-        <p>© 2026 Hi Thai. Все права защищены.</p>
-        <p class="text-xs text-gray-400 mt-1">
-          Самозанятый: <span class="text-gray-400">Щеголев Александр Юрьевич</span> | ИНН: <span class="text-gray-400">7535045933099</span>
-        </p>
-        <p class="text-xs text-gray-400">Email: support@hiithai.com</p>
+  <footer class="border-t border-ink/10 py-10 text-sm text-muted">
+    <div class="container flex flex-col md:flex-row md:items-start justify-between gap-8">
+      <div>
+        <div class="flex items-center gap-2 text-lg font-extrabold tracking-tight text-ink">
+          <span class="w-2 h-2 rounded-full bg-thaiOrange" aria-hidden="true"></span>
+          <span>Hi <span class="text-thaiTeal">Thai</span></span>
+        </div>
+        <p class="mt-3">© 2026 Hi Thai. Все права защищены.</p>
+        <p class="mt-1 text-xs">Самозанятый: Щеголев Александр Юрьевич | ИНН: 7535045933099</p>
+        <p class="mt-1 text-xs">Email: support@hiithai.com</p>
       </div>
-     <div class="flex flex-wrap items-center gap-4 text-xs md:text-sm">
-  <a href="https://t.me/hiithai" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 transition flex items-center gap-1.5 font-medium">
-    <svg class="w-4 h-4 fill-current text-[#229ED9]" viewBox="0 0 24 24">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
-    </svg>
-    <span>Наш Telegram-канал</span>
-  </a>
-  <span class="text-gray-600" aria-hidden="true">•</span>
-  <a href="privacy.html" class="hover:text-white transition">Политика конфиденциальности</a>
-  <a href="terms.html" class="hover:text-white transition">Условия использования</a>
-</div>
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
+        <a href="https://t.me/hiithai" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-medium text-thaiTeal hover:text-thaiTealDark transition">
+          <svg class="ico w-4 h-4" aria-hidden="true"><use href="#i-send"/></svg>
+          Наш Telegram-канал
+        </a>
+        <a href="privacy.html" class="hover:text-ink transition">Политика конфиденциальности</a>
+        <a href="terms.html" class="hover:text-ink transition">Условия использования</a>
+      </div>
     </div>
   </footer>
 
-  <!-- Mobile menu toggle -->
+  <!-- Закреплённая кнопка на телефоне (появляется после первого экрана) -->
+  <div id="sticky-cta" class="md:hidden fixed inset-x-0 bottom-0 z-40 p-3 bg-sand/90 backdrop-blur-md border-t border-ink/10 translate-y-full transition-transform duration-300" inert>
+    <a href="https://t.me/hi_thai_bot" target="_blank" rel="noopener" class="btn-primary w-full px-6 py-3.5 text-base">
+      <svg class="ico w-5 h-5" aria-hidden="true"><use href="#i-send"/></svg>
+      Открыть бота в Telegram
+    </a>
+  </div>
+
+  <!-- UI: mobile menu, sticky CTA, lazy video, reveal on scroll -->
   <script>
-    (function() {
-      const btn = document.getElementById('menu-toggle');
-      const menu = document.getElementById('mobile-menu');
-      if (!btn || !menu) return;
-      function setOpen(open) {
+  (function() {
+    const btn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      const setOpen = open => {
         menu.classList.toggle('hidden', !open);
         menu.classList.toggle('flex', open);
         btn.setAttribute('aria-expanded', String(open));
-      }
+      };
       btn.addEventListener('click', () => setOpen(menu.classList.contains('hidden')));
       menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
-    })();
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+      return;
+    }
+
+    const sticky = document.getElementById('sticky-cta');
+    const heroCta = document.getElementById('hero-cta');
+    if (sticky && heroCta) {
+      new IntersectionObserver(([entry]) => {
+        const show = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+        sticky.classList.toggle('translate-y-full', !show);
+        sticky.toggleAttribute('inert', !show);
+      }).observe(heroCta);
+    }
+
+    const video = document.querySelector('video[data-lazy-video]');
+    if (video) {
+      const videoObserver = new IntersectionObserver(entries => {
+        if (!entries.some(e => e.isIntersecting)) return;
+        videoObserver.disconnect();
+        video.querySelectorAll('source[data-src]').forEach(s => { s.src = s.dataset.src; });
+        video.load();
+        video.play().catch(() => {});
+      }, { rootMargin: '200px' });
+      videoObserver.observe(video);
+    }
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('is-visible');
+        revealObserver.unobserve(e.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  })();
   </script>
 
   <!-- Attribution: parse UTM/yclid, get token from backend, update bot links -->

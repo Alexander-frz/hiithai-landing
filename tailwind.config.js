@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         thaiOrange: '#FF6B35',
-        thaiTeal: '#007F74',
+        thaiTeal: '#00756B',
       },
     },
   },

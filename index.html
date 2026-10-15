@@ -66,7 +66,13 @@
   <!-- Hero Section -->
   <section class="relative bg-gradient-to-br from-gray-900 to-indigo-950 text-white overflow-hidden py-24 md:py-32">
     <div class="absolute inset-0 opacity-40">
-      <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1600" alt="Thailand" class="w-full h-full object-cover">
+      <img
+        src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1000&q=60&auto=format&fit=crop"
+        srcset="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=640&q=60&auto=format&fit=crop 640w,
+                https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1000&q=60&auto=format&fit=crop 1000w,
+                https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1600&q=60&auto=format&fit=crop 1600w"
+        sizes="100vw" width="1600" height="1066" fetchpriority="high"
+        alt="Thailand" class="w-full h-full object-cover">
     </div>
     <div class="container mx-auto relative z-10 px-6 text-center max-w-4xl">
       <span class="bg-thaiOrange text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Персональный консьерж-сервис в Таиланде</span>

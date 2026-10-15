@@ -25,20 +25,10 @@
   <meta property="og:description" content="Консьерж-сервис, экскурсии, трансфер и жилье в один клик через Telegram.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1200">
   <meta property="og:url" content="https://hiithai.com">
+  <link rel="canonical" href="https://hiithai.com/">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            thaiOrange: '#FF6B35',
-            thaiTeal: '#00A896',
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="tailwind.css">
 </head>
 <body class="font-sans text-gray-900 bg-white antialiased">
 
@@ -54,14 +44,23 @@
         <a href="#advantages" class="hover:text-thaiTeal transition">Преимущества</a>
       </nav>
       <div class="flex items-center gap-3">
-        <a href="https://t.me/shchgo" target="_blank" class="hidden sm:inline-block border border-thaiTeal text-thaiTeal hover:bg-thaiTeal/10 font-semibold px-4 py-2.5 rounded-full transition contact-manager-link">
+        <a href="https://t.me/shchgo" target="_blank" rel="noopener" class="hidden sm:inline-block border border-thaiTeal text-thaiTeal hover:bg-thaiTeal/10 font-semibold px-4 py-2.5 rounded-full transition contact-manager-link">
           Написать менеджеру
         </a>
-        <a href="https://t.me/hi_thai_bot" target="_blank" class="bg-thaiTeal hover:bg-opacity-90 text-white font-semibold px-5 py-2.5 rounded-full transition shadow-md">
+        <a href="https://t.me/hi_thai_bot" target="_blank" rel="noopener" class="bg-thaiTeal hover:bg-opacity-90 text-white font-semibold px-4 sm:px-5 py-2.5 rounded-full transition shadow-md text-sm sm:text-base">
           Открыть в Telegram
         </a>
+        <button id="menu-toggle" type="button" class="md:hidden p-2 -mr-2 text-gray-700" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
       </div>
     </div>
+    <nav id="mobile-menu" class="hidden md:hidden border-t border-gray-100 px-6 py-3 font-medium text-gray-700 flex-col">
+      <a href="#features" class="py-3">Услуги</a>
+      <a href="#how-it-works" class="py-3">Как запустить</a>
+      <a href="#advantages" class="py-3">Преимущества</a>
+      <a href="https://t.me/shchgo" target="_blank" rel="noopener" class="py-3 text-thaiTeal contact-manager-link">Написать менеджеру</a>
+    </nav>
   </header>
 
   <!-- Hero Section -->
@@ -164,7 +163,7 @@
         </div>
 
         <div class="bg-gray-900 rounded-3xl overflow-hidden shadow-2xl aspect-[9/16] max-w-xs mx-auto border-4 border-gray-800">
-          <video class="w-full h-full object-cover" autoplay muted loop playsinline preload="auto">
+          <video class="w-full h-full object-cover" autoplay muted loop playsinline preload="metadata">
             <source src="demo.mp4" type="video/mp4">
             Ваш браузер не поддерживает видео.
           </video>
@@ -419,6 +418,22 @@
 </div>
     </div>
   </footer>
+
+  <!-- Mobile menu toggle -->
+  <script>
+    (function() {
+      const btn = document.getElementById('menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+      function setOpen(open) {
+        menu.classList.toggle('hidden', !open);
+        menu.classList.toggle('flex', open);
+        btn.setAttribute('aria-expanded', String(open));
+      }
+      btn.addEventListener('click', () => setOpen(menu.classList.contains('hidden')));
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+    })();
+  </script>
 
   <!-- Attribution: parse UTM/yclid, get token from backend, update bot links -->
   <script>

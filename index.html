@@ -165,9 +165,11 @@
         </div>
 
         <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <article class="reveal md:col-span-2 relative overflow-hidden rounded-3xl bg-thaiTeal text-white p-8 md:p-10 min-h-[260px] flex flex-col justify-end">
-            <svg class="ico absolute -right-6 -top-6 w-48 h-48 text-white/10" stroke-width="1.2" aria-hidden="true"><use href="#i-map"/></svg>
-            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-white/15">
+          <article class="reveal md:col-span-2 relative isolate overflow-hidden rounded-3xl bg-thaiTeal text-white p-8 md:p-10 min-h-[320px] md:min-h-[360px] flex flex-col justify-end">
+            <img src="img/beach-700.webp" srcset="img/beach-700.webp 700w, img/beach-1200.webp 1200w" sizes="(min-width: 1024px) 66vw, (min-width: 768px) 100vw, 100vw"
+              width="1200" height="794" loading="lazy" decoding="async" alt="" class="absolute inset-0 -z-10 w-full h-full object-cover object-[50%_78%]">
+            <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-t from-ink/80 via-ink/25 to-transparent"></div>
+            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-sm">
               <svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-map"/></svg>
             </span>
             <h3 class="mt-6 text-2xl md:text-3xl font-bold">Экскурсии</h3>
@@ -357,11 +359,13 @@
     <!-- Финальный CTA -->
     <section class="py-20 md:py-28">
       <div class="container">
-        <div class="reveal relative overflow-hidden rounded-[2rem] bg-ink text-white px-6 py-14 md:px-16 md:py-20 text-center">
-          <div aria-hidden="true" class="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 w-[40rem] h-[20rem] rounded-full bg-thaiTeal/40 blur-3xl"></div>
+        <div class="reveal relative isolate overflow-hidden rounded-[2rem] bg-ink text-white px-6 py-16 md:px-16 md:py-24 text-center">
+          <img src="img/sunset-800.webp" srcset="img/sunset-800.webp 800w, img/sunset-1600.webp 1600w" sizes="(min-width: 1200px) 1160px, 100vw"
+            width="1600" height="1058" loading="lazy" decoding="async" alt="" class="absolute inset-0 -z-10 w-full h-full object-cover object-[50%_45%]">
+          <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-b from-ink/45 via-ink/20 to-ink/65"></div>
           <div class="relative">
-            <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">Ваш личный ассистент всегда под рукой</h2>
-            <p class="mt-5 text-lg text-white/80 max-w-xl mx-auto">Использование бота полностью бесплатно. Никаких подписок. Вы платите только за заказанные услуги.</p>
+            <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight [text-shadow:0_2px_18px_rgba(0,0,0,0.45)]">Ваш личный ассистент всегда под рукой</h2>
+            <p class="mt-5 text-lg text-white max-w-xl mx-auto [text-shadow:0_1px_12px_rgba(0,0,0,0.5)]">Использование бота полностью бесплатно. Никаких подписок. Вы платите только за заказанные услуги.</p>
             <div class="mt-9 flex flex-col sm:flex-row justify-center gap-3">
               <a href="https://t.me/hi_thai_bot" target="_blank" rel="noopener" class="btn-accent px-7 py-4 text-lg">
                 Запустить Hi Thai в Telegram

@@ -68,6 +68,7 @@
       </a>
       <nav class="hidden md:flex items-center gap-8 text-[15px] font-medium text-muted" aria-label="Основное меню">
         <a href="#features" class="hover:text-ink transition">Услуги</a>
+        <a href="#prices" class="hover:text-ink transition">Цены</a>
         <a href="#how-it-works" class="hover:text-ink transition">Как это работает</a>
         <a href="#advantages" class="hover:text-ink transition">Преимущества</a>
         <a href="#reviews" class="hover:text-ink transition">Отзывы</a>
@@ -87,6 +88,7 @@
     </div>
     <nav id="mobile-menu" class="hidden md:hidden container pb-4 flex-col text-base font-medium" aria-label="Мобильное меню">
       <a href="#features" class="py-3 border-b border-ink/5">Услуги</a>
+      <a href="#prices" class="py-3 border-b border-ink/5">Цены</a>
       <a href="#how-it-works" class="py-3 border-b border-ink/5">Как это работает</a>
       <a href="#advantages" class="py-3 border-b border-ink/5">Преимущества</a>
       <a href="#reviews" class="py-3 border-b border-ink/5">Отзывы</a>
@@ -208,6 +210,65 @@
               <svg class="ico w-5 h-5" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Цены -->
+    <section id="prices" class="pb-20 md:pb-28 scroll-mt-16">
+      <div class="container">
+        <div class="max-w-2xl reveal">
+          <p class="eyebrow">Цены</p>
+          <h2 class="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">Сколько это стоит</h2>
+          <p class="mt-4 text-lg text-muted">Бот бесплатный — вы платите только за саму услугу. Цены в тайских батах (฿).</p>
+        </div>
+
+        <div class="mt-12 grid lg:grid-cols-[0.9fr_1.1fr] gap-4">
+          <!-- Трансфер -->
+          <div class="reveal rounded-3xl bg-white p-7 md:p-9 ring-1 ring-ink/5 flex flex-col">
+            <div class="flex items-center gap-3">
+              <span class="grid place-items-center w-11 h-11 rounded-2xl bg-thaiOrange/15 text-ink">
+                <svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-car"/></svg>
+              </span>
+              <h3 class="text-xl font-bold">Трансфер</h3>
+            </div>
+            <ul class="mt-6 divide-y divide-ink/5">
+              <li class="flex items-baseline justify-between gap-4 py-3"><span>Утапао → Паттайя</span><span class="shrink-0 font-semibold">от 1&nbsp;100&nbsp;฿</span></li>
+              <li class="flex items-baseline justify-between gap-4 py-3"><span>Суварнабхуми ⇄ Паттайя</span><span class="shrink-0 font-semibold">от 1&nbsp;300&nbsp;฿</span></li>
+              <li class="flex items-baseline justify-between gap-4 py-3"><span>Бангкок ⇄ Паттайя</span><span class="shrink-0 font-semibold">от 1&nbsp;500&nbsp;฿</span></li>
+              <li class="flex items-baseline justify-between gap-4 py-3"><span>Дон Муанг ⇄ Паттайя</span><span class="shrink-0 font-semibold">от 1&nbsp;700&nbsp;฿</span></li>
+              <li class="flex items-baseline justify-between gap-4 py-3"><span>Суварнабхуми → Хуахин / Районг</span><span class="shrink-0 font-semibold">от 2&nbsp;300&nbsp;฿</span></li>
+              <li class="flex items-baseline justify-between gap-4 py-3"><span>Суварнабхуми → Ко Чанг</span><span class="shrink-0 font-semibold">от 3&nbsp;800&nbsp;฿</span></li>
+            </ul>
+            <p class="mt-auto pt-6 text-sm text-muted">Цена за машину, не за человека. «От» — седан Toyota Camry (до 3 пассажиров). Также есть минивэн Innova (до 6) и микроавтобус Commuter (до 10).</p>
+          </div>
+
+          <!-- Экскурсии -->
+          <div class="reveal rounded-3xl bg-white p-7 md:p-9 ring-1 ring-ink/5 flex flex-col">
+            <div class="flex items-center gap-3">
+              <span class="grid place-items-center w-11 h-11 rounded-2xl bg-thaiTeal/10 text-thaiTeal">
+                <svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-map"/></svg>
+              </span>
+              <h3 class="text-xl font-bold">Экскурсии из Паттайи</h3>
+            </div>
+            <ul class="mt-6 grid sm:grid-cols-2 gap-3">
+              <li class="rounded-2xl bg-sand p-4"><div class="flex items-baseline justify-between gap-3"><span class="font-semibold">Абсолютные хиты</span><span class="shrink-0 font-semibold text-thaiTeal">от 2&nbsp;000&nbsp;฿</span></div><p class="mt-1 text-sm text-muted">Дискавери 8 в 1, Айюттайя, Река Квай</p></li>
+              <li class="rounded-2xl bg-sand p-4"><div class="flex items-baseline justify-between gap-3"><span class="font-semibold">Лёгкие программы</span><span class="shrink-0 font-semibold text-thaiTeal">от 700&nbsp;฿</span></div><p class="mt-1 text-sm text-muted">Нонг Нуч, аквапарки, шоу, зоопарк</p></li>
+              <li class="rounded-2xl bg-sand p-4"><div class="flex items-baseline justify-between gap-3"><span class="font-semibold">Морские программы</span><span class="shrink-0 font-semibold text-thaiTeal">от 2&nbsp;400&nbsp;฿</span></div><p class="mt-1 text-sm text-muted">Острова, снорклинг, яхта, рыбалка</p></li>
+              <li class="rounded-2xl bg-sand p-4"><div class="flex items-baseline justify-between gap-3"><span class="font-semibold">Дальние острова</span><span class="shrink-0 font-semibold text-thaiTeal">от 1&nbsp;800&nbsp;฿</span></div><p class="mt-1 text-sm text-muted">Ко Самет, Ко Чанг, Ко Куд</p></li>
+              <li class="rounded-2xl bg-sand p-4"><div class="flex items-baseline justify-between gap-3"><span class="font-semibold">Туры в Бангкок</span><span class="shrink-0 font-semibold text-thaiTeal">от 2&nbsp;500&nbsp;฿</span></div><p class="mt-1 text-sm text-muted">Королевский дворец, круизы с ужином</p></li>
+              <li class="rounded-2xl bg-sand p-4"><div class="flex items-baseline justify-between gap-3"><span class="font-semibold">Культура и история</span><span class="shrink-0 font-semibold text-thaiTeal">от 1&nbsp;700&nbsp;฿</span></div><p class="mt-1 text-sm text-muted">Храм Ват Ян, Знакомство с Сиамом</p></li>
+              <li class="rounded-2xl bg-sand p-4"><div class="flex items-baseline justify-between gap-3"><span class="font-semibold">Авторские программы</span><span class="shrink-0 font-semibold text-thaiTeal">от 2&nbsp;700&nbsp;฿</span></div><p class="mt-1 text-sm text-muted">Кхао Яй, водопады, пещеры, рафтинг</p></li>
+              <li class="rounded-2xl bg-sand p-4"><div class="flex items-baseline justify-between gap-3"><span class="font-semibold">Активный отдых</span><span class="shrink-0 font-semibold text-thaiTeal">от 3&nbsp;300&nbsp;฿</span></div><p class="mt-1 text-sm text-muted">Квадроциклы, гидроциклы, дайвинг</p></li>
+            </ul>
+            <div class="mt-auto pt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <p class="text-sm text-muted">Цена за взрослого, для детей дешевле. Точную стоимость и даты бот покажет при бронировании.</p>
+              <a href="https://t.me/hi_thai_bot" target="_blank" rel="noopener" class="btn-primary shrink-0 px-5 py-3 text-sm">
+                Весь каталог в боте
+                <svg class="ico w-4 h-4" aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

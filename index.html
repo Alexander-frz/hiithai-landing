@@ -37,6 +37,78 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="tailwind.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Как оплатить, если российские карты в Таиланде не работают?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Любым удобным способом: рублями переводом, через СБП или наличными в батах."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Нужно ли платить заранее?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да, бронирование подтверждается полной предоплатой: так мы гарантированно закрепляем за вами места у партнёров. Если сомневаетесь, сначала напишите менеджеру — ответим на все вопросы до оплаты."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Что, если экскурсию отменят или у меня поменяются планы?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Если тур отменён организатором или из-за погоды, вернём деньги полностью или перенесём на другую дату — на ваш выбор. Если вы отменяете бронь не позднее чем за 24 часа, — полный возврат или бесплатный перенос. Для многодневных туров с проживанием — не позднее чем за 72 часа. При более поздней отмене деньги не возвращаются, так как места уже оплачены партнёрам."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Почему вам можно доверять?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Мы работаем с туристами с 2023 года и сами живём в Таиланде — в разных его частях, поэтому знаем страну изнутри. Отзывы наших клиентов можно прочитать в Telegram-канале — каждый со ссылкой на оригинал."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Я не дружу с ботами. Можно просто написать человеку?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Конечно. Напишите менеджеру @shchgo — ответим лично, без ботов и очередей."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Вы забираете из отеля?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да, трансфер входит в стоимость экскурсии. Забираем практически из всех районов Паттайи."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Можно поехать с детьми?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Да. Детская цена зависит от экскурсии: условия указаны в боте отдельно для каждой программы, а уточнить детали всегда можно у менеджера."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как меня встретят в аэропорту? Что, если рейс задержится?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Водитель встретит вас с табличкой. Если рейс задерживается, ничего доплачивать не нужно."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="font-sans bg-sand text-ink antialiased pb-20 md:pb-0">
 
@@ -55,6 +127,7 @@
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
     <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
     <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
   </svg>
@@ -66,32 +139,34 @@
         <span class="w-2.5 h-2.5 rounded-full bg-thaiOrange" aria-hidden="true"></span>
         <span>Hi <span class="text-thaiTeal">Thai</span></span>
       </a>
-      <nav class="hidden md:flex items-center gap-8 text-[15px] font-medium text-muted" aria-label="Основное меню">
+      <nav class="hidden lg:flex items-center gap-7 text-[15px] font-medium text-muted" aria-label="Основное меню">
         <a href="#features" class="hover:text-ink transition">Услуги</a>
         <a href="#prices" class="hover:text-ink transition">Цены</a>
         <a href="#how-it-works" class="hover:text-ink transition">Как это работает</a>
         <a href="#advantages" class="hover:text-ink transition">Преимущества</a>
         <a href="#reviews" class="hover:text-ink transition">Отзывы</a>
+        <a href="#faq" class="hover:text-ink transition">Вопросы</a>
       </nav>
       <div class="flex items-center gap-2">
-        <a href="https://t.me/shchgo" target="_blank" rel="noopener" class="btn-ghost hidden lg:inline-flex px-4 py-2 text-sm contact-manager-link">
+        <a href="https://t.me/shchgo" target="_blank" rel="noopener" class="btn-ghost hidden xl:inline-flex px-4 py-2 text-sm contact-manager-link">
           Написать менеджеру
         </a>
         <a href="https://t.me/hi_thai_bot" target="_blank" rel="noopener" class="btn-primary px-4 py-2 text-sm">
           <svg class="ico w-4 h-4" aria-hidden="true"><use href="#i-send"/></svg>
           Открыть бота
         </a>
-        <button id="menu-toggle" type="button" class="md:hidden p-2 -mr-2 text-ink" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+        <button id="menu-toggle" type="button" class="lg:hidden p-2 -mr-2 text-ink" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
           <svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-menu"/></svg>
         </button>
       </div>
     </div>
-    <nav id="mobile-menu" class="hidden md:hidden container pb-4 flex-col text-base font-medium" aria-label="Мобильное меню">
+    <nav id="mobile-menu" class="hidden lg:hidden container pb-4 flex-col text-base font-medium" aria-label="Мобильное меню">
       <a href="#features" class="py-3 border-b border-ink/5">Услуги</a>
       <a href="#prices" class="py-3 border-b border-ink/5">Цены</a>
       <a href="#how-it-works" class="py-3 border-b border-ink/5">Как это работает</a>
       <a href="#advantages" class="py-3 border-b border-ink/5">Преимущества</a>
       <a href="#reviews" class="py-3 border-b border-ink/5">Отзывы</a>
+      <a href="#faq" class="py-3 border-b border-ink/5">Вопросы</a>
       <a href="https://t.me/shchgo" target="_blank" rel="noopener" class="py-3 text-thaiTeal contact-manager-link">Написать менеджеру</a>
     </nav>
   </header>
@@ -413,6 +488,80 @@
               <a href="https://t.me/aasiahub/22/58" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-thaiTeal hover:underline">Читать в Telegram<svg class="ico w-3.5 h-3.5" aria-hidden="true"><use href="#i-out"/></svg></a>
             </div>
           </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 md:py-28 scroll-mt-16">
+      <div class="container grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16">
+        <div class="reveal lg:sticky lg:top-24 lg:self-start">
+          <p class="eyebrow">Вопросы</p>
+          <h2 class="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">Частые вопросы</h2>
+          <p class="mt-4 text-lg text-muted">Не нашли ответ? Напишите менеджеру — ответим лично.</p>
+          <a href="https://t.me/shchgo" target="_blank" rel="noopener" class="btn-ghost mt-6 px-5 py-3 contact-manager-link">
+            Задать вопрос менеджеру
+            <svg class="ico w-4 h-4" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+
+        <div class="reveal divide-y divide-ink/10 border-y border-ink/10">
+          <details class="group py-5" open>
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+              Как оплатить, если российские карты в Таиланде не работают?
+              <svg class="ico w-5 h-5 shrink-0 text-thaiTeal transition-transform duration-200 group-open:rotate-45" aria-hidden="true"><use href="#i-plus"/></svg>
+            </summary>
+            <p class="mt-3 text-muted leading-relaxed">Любым удобным способом: рублями переводом, через СБП или наличными в батах.</p>
+          </details>
+          <details class="group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+              Нужно ли платить заранее?
+              <svg class="ico w-5 h-5 shrink-0 text-thaiTeal transition-transform duration-200 group-open:rotate-45" aria-hidden="true"><use href="#i-plus"/></svg>
+            </summary>
+            <p class="mt-3 text-muted leading-relaxed">Да, бронирование подтверждается полной предоплатой: так мы гарантированно закрепляем за вами места у партнёров. Если сомневаетесь, сначала напишите менеджеру — ответим на все вопросы до оплаты.</p>
+          </details>
+          <details class="group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+              Что, если экскурсию отменят или у меня поменяются планы?
+              <svg class="ico w-5 h-5 shrink-0 text-thaiTeal transition-transform duration-200 group-open:rotate-45" aria-hidden="true"><use href="#i-plus"/></svg>
+            </summary>
+            <p class="mt-3 text-muted leading-relaxed">Если тур отменён организатором или из-за погоды, вернём деньги полностью или перенесём на другую дату — на ваш выбор. Если вы отменяете бронь не позднее чем за 24 часа, — полный возврат или бесплатный перенос. Для многодневных туров с проживанием — не позднее чем за 72 часа. При более поздней отмене деньги не возвращаются, так как места уже оплачены партнёрам.</p>
+          </details>
+          <details class="group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+              Почему вам можно доверять?
+              <svg class="ico w-5 h-5 shrink-0 text-thaiTeal transition-transform duration-200 group-open:rotate-45" aria-hidden="true"><use href="#i-plus"/></svg>
+            </summary>
+            <p class="mt-3 text-muted leading-relaxed">Мы работаем с туристами с 2023 года и сами живём в Таиланде — в разных его частях, поэтому знаем страну изнутри. Отзывы наших клиентов можно прочитать в <a href="https://t.me/aasiahub/22" target="_blank" rel="noopener noreferrer" class="font-medium text-thaiTeal underline underline-offset-4">Telegram-канале</a> — каждый со ссылкой на оригинал.</p>
+          </details>
+          <details class="group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+              Я не дружу с ботами. Можно просто написать человеку?
+              <svg class="ico w-5 h-5 shrink-0 text-thaiTeal transition-transform duration-200 group-open:rotate-45" aria-hidden="true"><use href="#i-plus"/></svg>
+            </summary>
+            <p class="mt-3 text-muted leading-relaxed">Конечно. Напишите менеджеру <a href="https://t.me/shchgo" target="_blank" rel="noopener" class="font-medium text-thaiTeal underline underline-offset-4 contact-manager-link">@shchgo</a> — ответим лично, без ботов и очередей.</p>
+          </details>
+          <details class="group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+              Вы забираете из отеля?
+              <svg class="ico w-5 h-5 shrink-0 text-thaiTeal transition-transform duration-200 group-open:rotate-45" aria-hidden="true"><use href="#i-plus"/></svg>
+            </summary>
+            <p class="mt-3 text-muted leading-relaxed">Да, трансфер входит в стоимость экскурсии. Забираем практически из всех районов Паттайи.</p>
+          </details>
+          <details class="group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+              Можно поехать с детьми?
+              <svg class="ico w-5 h-5 shrink-0 text-thaiTeal transition-transform duration-200 group-open:rotate-45" aria-hidden="true"><use href="#i-plus"/></svg>
+            </summary>
+            <p class="mt-3 text-muted leading-relaxed">Да. Детская цена зависит от экскурсии: условия указаны в боте отдельно для каждой программы, а уточнить детали всегда можно у менеджера.</p>
+          </details>
+          <details class="group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+              Как меня встретят в аэропорту? Что, если рейс задержится?
+              <svg class="ico w-5 h-5 shrink-0 text-thaiTeal transition-transform duration-200 group-open:rotate-45" aria-hidden="true"><use href="#i-plus"/></svg>
+            </summary>
+            <p class="mt-3 text-muted leading-relaxed">Водитель встретит вас с табличкой. Если рейс задерживается, ничего доплачивать не нужно.</p>
+          </details>
         </div>
       </div>
     </section>

@@ -411,48 +411,56 @@
 
     <!-- Преимущества -->
     <section id="advantages" class="py-20 md:py-28 scroll-mt-16">
-      <div class="container">
-        <div class="max-w-2xl reveal">
-          <p class="eyebrow">Почему именно Hi Thai</p>
-          <h2 class="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">Комфорт и безопасность на каждом шагу</h2>
-          <p class="mt-4 text-lg text-muted">Мы берём на себя все бытовые и организационные сложности вашего отдыха или проживания в Таиланде.</p>
-        </div>
+      <div class="container grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-16 items-start">
+        <figure class="reveal relative overflow-hidden rounded-3xl bg-chat aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/5] lg:sticky lg:top-24">
+          <img src="img/hammock-700.webp" srcset="img/hammock-700.webp 700w, img/hammock-1100.webp 1100w" sizes="(min-width: 1024px) 480px, 100vw"
+            width="1100" height="1375" loading="lazy" decoding="async" alt="Гамак под пальмой на пляже у моря" class="absolute inset-0 w-full h-full object-cover object-[50%_70%] lg:object-center">
+          <figcaption class="absolute left-4 bottom-4 right-4 sm:right-auto flex items-center gap-3 rounded-2xl bg-white/90 backdrop-blur px-4 py-3 shadow-lg">
+            <span class="grid place-items-center w-9 h-9 shrink-0 rounded-xl bg-thaiTeal/10 text-thaiTeal">
+              <svg class="ico w-5 h-5" aria-hidden="true"><use href="#i-check"/></svg>
+            </span>
+            <span class="text-sm leading-tight"><b class="block font-semibold">Вы отдыхаете</b><span class="text-muted">а все вопросы решаем мы</span></span>
+          </figcaption>
+        </figure>
 
-        <div class="reveal mt-12 relative overflow-hidden rounded-3xl bg-chat aspect-[4/3] sm:aspect-[16/9]">
-          <img src="img/hammock-800.webp" srcset="img/hammock-800.webp 800w, img/hammock-1400.webp 1400w" sizes="(min-width: 1200px) 1160px, 100vw"
-            width="1400" height="988" loading="lazy" decoding="async" alt="Гамак под пальмой на пляже у моря" class="absolute inset-0 w-full h-full object-cover object-[50%_25%]">
-        </div>
+        <div>
+          <div class="reveal">
+            <p class="eyebrow">Почему именно Hi Thai</p>
+            <h2 class="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">Комфорт и безопасность на каждом шагу</h2>
+            <p class="mt-4 text-lg text-muted">Мы берём на себя все бытовые и организационные сложности вашего отдыха или проживания в Таиланде.</p>
+          </div>
 
-        <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
-          <div class="reveal">
-            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiTeal/10 text-thaiTeal"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-zap"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold">Всё в одном Telegram</h3>
-            <p class="mt-2 text-muted">Никаких лишних приложений, регистраций и сайтов. Все нужные услуги доступны в пару кликов прямо в вашем мессенджере.</p>
-          </div>
-          <div class="reveal">
-            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiOrange/15 text-ink"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-chat"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold">Поддержка на русском 24/7</h3>
-            <p class="mt-2 text-muted">Забудьте о языковом барьере и сложностях перевода. Наша команда всегда на связи и готова оперативно помочь в любой ситуации.</p>
-          </div>
-          <div class="reveal">
-            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiTeal/10 text-thaiTeal"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-card"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold">Прозрачные расчёты</h3>
-            <p class="mt-2 text-muted">Удобные способы оплаты без скрытых комиссий банкоматов. Помогаем легко решить любые вопросы с местными платежами.</p>
-          </div>
-          <div class="reveal">
-            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiOrange/15 text-ink"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-shield"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold">Проверенные партнёры</h3>
-            <p class="mt-2 text-muted">Мы работаем только с надёжными гидами, водителями и собственниками жилья по всему Таиланду без завышенных цен.</p>
-          </div>
-          <div class="reveal">
-            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiTeal/10 text-thaiTeal"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-clock"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold">Экономия времени</h3>
-            <p class="mt-2 text-muted">Не нужно тратить часы на поиск информации по сотням чатов. Вы получаете готовое и проверенное решение за считанные минуты.</p>
-          </div>
-          <div class="reveal">
-            <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiOrange/15 text-ink"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-pin"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold">Локальная экспертиза</h3>
-            <p class="mt-2 text-muted">Живём и работаем в Таиланде, поэтому знаем все тонкости, лучшие локации, маршруты и нетуристические места.</p>
+          <div class="mt-10 grid sm:grid-cols-2 gap-x-10 gap-y-10">
+            <div class="reveal">
+              <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiTeal/10 text-thaiTeal"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-zap"/></svg></span>
+              <h3 class="mt-5 text-lg font-bold">Всё в одном Telegram</h3>
+              <p class="mt-2 text-muted">Никаких лишних приложений, регистраций и сайтов. Все нужные услуги доступны в пару кликов прямо в вашем мессенджере.</p>
+            </div>
+            <div class="reveal">
+              <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiOrange/15 text-ink"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-chat"/></svg></span>
+              <h3 class="mt-5 text-lg font-bold">Поддержка на русском 24/7</h3>
+              <p class="mt-2 text-muted">Забудьте о языковом барьере и сложностях перевода. Наша команда всегда на связи и готова оперативно помочь в любой ситуации.</p>
+            </div>
+            <div class="reveal">
+              <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiTeal/10 text-thaiTeal"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-card"/></svg></span>
+              <h3 class="mt-5 text-lg font-bold">Прозрачные расчёты</h3>
+              <p class="mt-2 text-muted">Удобные способы оплаты без скрытых комиссий банкоматов. Помогаем легко решить любые вопросы с местными платежами.</p>
+            </div>
+            <div class="reveal">
+              <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiOrange/15 text-ink"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <h3 class="mt-5 text-lg font-bold">Проверенные партнёры</h3>
+              <p class="mt-2 text-muted">Мы работаем только с надёжными гидами, водителями и собственниками жилья по всему Таиланду без завышенных цен.</p>
+            </div>
+            <div class="reveal">
+              <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiTeal/10 text-thaiTeal"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-clock"/></svg></span>
+              <h3 class="mt-5 text-lg font-bold">Экономия времени</h3>
+              <p class="mt-2 text-muted">Не нужно тратить часы на поиск информации по сотням чатов. Вы получаете готовое и проверенное решение за считанные минуты.</p>
+            </div>
+            <div class="reveal">
+              <span class="grid place-items-center w-12 h-12 rounded-2xl bg-thaiOrange/15 text-ink"><svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-pin"/></svg></span>
+              <h3 class="mt-5 text-lg font-bold">Локальная экспертиза</h3>
+              <p class="mt-2 text-muted">Живём и работаем в Таиланде, поэтому знаем все тонкости, лучшие локации, маршруты и нетуристические места.</p>
+            </div>
           </div>
         </div>
       </div>

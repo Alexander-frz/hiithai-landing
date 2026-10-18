@@ -125,6 +125,7 @@
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
     <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></symbol>
     <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
     <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
@@ -746,6 +747,12 @@
     </div>
   </footer>
 
+  <!-- Кнопка «Наверх» (появляется после прокрутки) -->
+  <button id="to-top" type="button" aria-label="Наверх" inert
+    class="fixed right-4 bottom-24 md:right-6 md:bottom-6 z-40 grid place-items-center w-12 h-12 rounded-full bg-white text-ink shadow-lg shadow-ink/15 ring-1 ring-ink/10 hover:bg-thaiTeal hover:text-white transition duration-300 opacity-0 translate-y-3 pointer-events-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-thaiTeal">
+    <svg class="ico w-5 h-5" aria-hidden="true"><use href="#i-up"/></svg>
+  </button>
+
   <!-- Закреплённая кнопка на телефоне (появляется после первого экрана) -->
   <div id="sticky-cta" class="md:hidden fixed inset-x-0 bottom-0 z-40 p-3 bg-sand/90 backdrop-blur-md border-t border-ink/10 translate-y-full transition-transform duration-300" inert>
     <a href="https://t.me/hi_thai_bot" target="_blank" rel="noopener" class="btn-primary w-full px-6 py-3.5 text-base">
@@ -772,6 +779,27 @@
     if (!('IntersectionObserver' in window)) {
       document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
       return;
+    }
+
+    const toTop = document.getElementById('to-top');
+    if (toTop) {
+      let ticking = false;
+      const update = () => {
+        const show = window.scrollY > window.innerHeight;
+        toTop.classList.toggle('opacity-0', !show);
+        toTop.classList.toggle('translate-y-3', !show);
+        toTop.classList.toggle('pointer-events-none', !show);
+        toTop.toggleAttribute('inert', !show);
+        ticking = false;
+      };
+      window.addEventListener('scroll', () => {
+        if (!ticking) { ticking = true; requestAnimationFrame(update); }
+      }, { passive: true });
+      update();
+      toTop.addEventListener('click', () => {
+        const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      });
     }
 
     const sticky = document.getElementById('sticky-cta');

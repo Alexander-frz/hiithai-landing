@@ -43,3 +43,28 @@ html.js .reveal.is-visible {
 @media (prefers-reduced-motion: reduce) {
   html.js .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* Слон-маскот в FAQ */
+.mascot * { transform-box: view-box; }
+.mascot-body { animation: mascot-bob 3.2s ease-in-out infinite; }
+.mascot-shadow { transform-origin: 160px 288px; animation: mascot-shadow 3.2s ease-in-out infinite; }
+.mascot-trunk { transform-origin: 284px 172px; animation: mascot-trunk 2.6s ease-in-out infinite; }
+.mascot-ear { transform-origin: 244px 142px; animation: mascot-ear 3.2s ease-in-out infinite; }
+.mascot-eye { transform-origin: 258px 124px; animation: mascot-blink 4.5s infinite; }
+.mascot-q { animation: mascot-q 3.6s ease-in-out infinite; opacity: 0; }
+.mascot-q2 { animation-delay: 1.2s; }
+.mascot-q3 { animation-delay: 2.4s; }
+@keyframes mascot-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes mascot-shadow { 0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(0.93); } }
+@keyframes mascot-trunk { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-6deg); } }
+@keyframes mascot-ear { 0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(0.9); } }
+@keyframes mascot-blink { 0%, 93%, 100% { transform: scaleY(1); } 96% { transform: scaleY(0.1); } }
+@keyframes mascot-q {
+  0% { opacity: 0; transform: translateY(10px); }
+  20%, 75% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-26px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mascot *, .mascot-q { animation: none !important; }
+  .mascot-q { opacity: 1; }
+}

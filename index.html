@@ -331,7 +331,7 @@
 
         <div class="mt-12 grid lg:grid-cols-[0.9fr_1.1fr] gap-4">
           <!-- Трансфер -->
-          <div class="reveal rounded-3xl bg-white p-7 md:p-9 ring-1 ring-ink/5 flex flex-col">
+          <div class="reveal rounded-3xl bg-white p-7 md:p-9 ring-1 ring-ink/5 flex flex-col lg:self-start">
             <div class="flex items-center gap-3">
               <span class="grid place-items-center w-11 h-11 rounded-2xl bg-thaiOrange/15 text-ink">
                 <svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-car"/></svg>
@@ -346,11 +346,18 @@
               <li class="flex items-baseline justify-between gap-4 py-3"><span>Суварнабхуми → Хуахин / Районг</span><span class="shrink-0 font-semibold">от 2&nbsp;300&nbsp;฿</span></li>
               <li class="flex items-baseline justify-between gap-4 py-3"><span>Суварнабхуми → Ко Чанг</span><span class="shrink-0 font-semibold">от 3&nbsp;800&nbsp;฿</span></li>
             </ul>
-            <p class="mt-auto pt-6 text-sm text-muted">Цена за машину, не за человека. «От» — седан Toyota Camry (до 3 пассажиров). Также есть минивэн Innova (до 6) и микроавтобус Commuter (до 10).</p>
+            <p class="mt-6 text-sm text-muted">Цена за машину, не за человека. «От» — седан Toyota Camry (до 3 пассажиров). Также есть минивэн Innova (до 6) и микроавтобус Commuter (до 10).</p>
           </div>
 
           <!-- Экскурсии -->
-          <div class="reveal rounded-3xl bg-white p-7 md:p-9 ring-1 ring-ink/5 flex flex-col">
+          <div class="reveal overflow-hidden rounded-3xl bg-white p-7 md:p-9 ring-1 ring-ink/5 flex flex-col">
+            <figure class="relative -mx-7 -mt-7 mb-7 md:-mx-9 md:-mt-9 md:mb-8 aspect-[2/1] sm:aspect-[5/2] bg-chat">
+              <img src="img/yacht-700.webp" srcset="img/yacht-700.webp 700w, img/yacht-1200.webp 1200w" sizes="(min-width: 1024px) 660px, 100vw"
+                width="1200" height="595" loading="lazy" decoding="async" alt="Катамараны в марине на закате" class="absolute inset-0 w-full h-full object-cover object-[50%_60%]">
+              <figcaption class="absolute left-4 bottom-4 rounded-full bg-white/90 backdrop-blur px-3.5 py-1.5 text-sm font-semibold shadow">
+                Морские программы — от 2&nbsp;400&nbsp;฿
+              </figcaption>
+            </figure>
             <div class="flex items-center gap-3">
               <span class="grid place-items-center w-11 h-11 rounded-2xl bg-thaiTeal/10 text-thaiTeal">
                 <svg class="ico w-6 h-6" aria-hidden="true"><use href="#i-map"/></svg>
